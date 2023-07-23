@@ -14,7 +14,7 @@ export default function LectureListSection() {
 		>
 			<h1 className="text-white text-xl font-bold">Lecture List Section</h1>
 			{lectureList.map((book, index) => {
-				return <Book book={book} />;
+				return <Book key={index + 100} book={book} />;
 			})}
 		</div>
 	);

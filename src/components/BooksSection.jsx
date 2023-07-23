@@ -14,13 +14,13 @@ export default function BooksSection() {
 			{lectureList.length === 0 ? (
 				<div className="grid grid-cols-4 px-4 gap-4">
 					{books.map((book, index) => {
-						return <Book book={book} section />;
+						return <Book key={index + 1} book={book} section />;
 					})}
 				</div>
 			) : (
 				<div className="grid grid-cols-3 gap-4 px-4">
 					{books.map((book, index) => {
-						return <Book book={book} section />;
+						return <Book key={index + 40} book={book} section />;
 					})}
 				</div>
 			)}

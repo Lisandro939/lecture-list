@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-let initialState;
+let initialState = [];
 
 if (typeof window !== "undefined") {
 	initialState = JSON.parse(localStorage.getItem("lectureList")) || [];

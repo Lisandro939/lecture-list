@@ -1,6 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const lectureListBooks = JSON.parse(localStorage.getItem("lectureList")) || [];
+let lectureListBooks;
+
+if (typeof window !== "undefined") {
+	lectureListBooks = JSON.parse(localStorage.getItem("lectureList")) || [];
+}
 
 const books = [
 	{

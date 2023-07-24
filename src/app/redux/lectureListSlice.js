@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// Si JSON.parse(localStorage.getItem("lectureList")) es null, entonces se asigna un array vacío
-const initialState = JSON.parse(localStorage.getItem("lectureList")) || [];
+let initialState;
+
+if (typeof window !== "undefined") {
+	initialState = JSON.parse(localStorage.getItem("lectureList")) || [];
+}
 
 export const lectureListSlice = createSlice({
 	name: "lectureList",
